@@ -123,43 +123,32 @@
   </footer>
 
   <script>
-    // Загрузка команд из _data/commands.json
-    fetch('./_data/commands.json')
-      .then(res => res.json())
-      .then(data => {
-        const commandsContainer = document.getElementById('commands');
-        let html = '';
-        
-        data.commands.forEach(cmd => {
-          html += `
-            <div class="command-card">
-              <div class="command-name">${cmd.name}</div>
-              <div class="command-desc">${cmd.description || "Описание отсутствует"}</div>
-              <code class="command-usage">${cmd.usage || "!" + cmd.name}</code>
-            </div>
-          `;
-        });
-        
-        commandsContainer.innerHTML = html;
-        document.getElementById('update-date').textContent = new Date().toLocaleDateString();
-        
-        // Сохраняем команды для поиска
-        window.allCommands = data.commands;
-      })
-      .catch(err => console.error('Ошибка загрузки команд:', err));
-
-    // Функция поиска
-    function searchCommands() {
-      const searchTerm = document.getElementById('search').value.toLowerCase();
-      const cards = document.querySelectorAll('.command-card');
+  fetch('./_data/commands.json')
+    .then(res => {
+      if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+      return res.json();
+    })
+    .then(data => {
+      const commandsContainer = document.getElementById('commands');
+      let html = '';
       
-      window.allCommands.forEach((cmd, index) => {
-        const matches = cmd.name.toLowerCase().includes(searchTerm) || 
-                       (cmd.description && cmd.description.toLowerCase().includes(searchTerm));
-        
-        cards[index].style.display = matches ? 'block' : 'none';
+      data.commands.forEach(cmd => {
+        html += `
+          <div class="command-card">
+            <div class="command-name">${cmd.name}</div>
+            <div class="command-desc">${cmd.description || "Описание отсутствует"}</div>
+            <code class="command-usage">${cmd.usage || "!" + cmd.name}</code>
+          </div>
+        `;
       });
-    }
-  </script>
+      
+      commandsContainer.innerHTML = html;
+    })
+    .catch(err => {
+      console.error('Ошибка загрузки команд:', err);
+      document.getElementById('commands').innerHTML = 
+        '<div class="error">Ошибка загрузки списка команд. Пожалуйста, попробуйте позже.</div>';
+    });
+</script>
 </body>
 </html>

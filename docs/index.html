@@ -202,7 +202,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', async () => {
             try {
-                const response = await fetch('./commands.json');
+                const response = await fetch('command.json')
                 if (!response.ok) throw new Error(`Ошибка загрузки: ${response.status}`);
                 
                 const data = await response.json();

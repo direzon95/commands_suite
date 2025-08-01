@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Команды бота</title>
+  <style>
+    body { background: #36393f; color: white; font-family: Arial; }
+    .command { background: #2f3136; padding: 10px; margin: 5px; border-radius: 5px; }
+  </style>
+</head>
+<body>
+  <h1>Список команд</h1>
+  <div id="commands"></div>
+  <script>
+    fetch('commands.json')
+      .then(res => res.json())
+      .then(data => {
+        let html = '';
+        data.commands.forEach(cmd => {
+          html += `<div class="command">
+            <b>${cmd.name}</b>: ${cmd.description}<br>
+            <code>${cmd.usage}</code>
+          </div>`;
+        });
+        document.getElementById("commands").innerHTML = html;
+      });
+  </script>
+</body>
+</html>

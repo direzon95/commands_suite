@@ -1,1 +1,1049 @@
-123
+{
+    "commands": [
+        {
+            "name": "fwhelp",
+            "description": "Без описания",
+            "usage": "!fwhelp"
+        },
+        {
+            "name": "ticketow",
+            "description": "Без описания",
+            "usage": "!ticketow"
+        },
+        {
+            "name": "8ball",
+            "description": "Без описания",
+            "usage": "!8ball <question>"
+        },
+        {
+            "name": "delete",
+            "description": "Без описания",
+            "usage": "!delete <reminder_id>"
+        },
+        {
+            "name": "ruleshelp",
+            "description": "Без описания",
+            "usage": "!ruleshelp"
+        },
+        {
+            "name": "unblacklist",
+            "description": "Удаляет пользователя из черного списка",
+            "usage": "!unblacklist !unblacklist @пользователь"
+        },
+        {
+            "name": "myreminders",
+            "description": "Без описания",
+            "usage": "!myreminders"
+        },
+        {
+            "name": "smartclean",
+            "description": "Без описания",
+            "usage": "!smartclean [criteria=help] [value] [limit=100]"
+        },
+        {
+            "name": "youtube",
+            "description": "Без описания",
+            "usage": "!youtube"
+        },
+        {
+            "name": "set_min_age",
+            "description": "Без описания",
+            "usage": "!set_min_age <days>"
+        },
+        {
+            "name": "serverstats",
+            "description": "Без описания",
+            "usage": "!serverstats [period=7d]"
+        },
+        {
+            "name": "vtstatus",
+            "description": "Без описания",
+            "usage": "!vtstatus"
+        },
+        {
+            "name": "unrestrict",
+            "description": "Снимает ограничения с команд пользователя",
+            "usage": "!unrestrict !unrestrict @пользователь [команда1 команда2 ...]"
+        },
+        {
+            "name": "reverse",
+            "description": "Без описания",
+            "usage": "!reverse <text>"
+        },
+        {
+            "name": "modlogs",
+            "description": "Без описания",
+            "usage": "!modlogs [limit=10] [user]"
+        },
+        {
+            "name": "restrict",
+            "description": "Запрещает пользователю использовать указанные команды",
+            "usage": "!restrict !restrict @пользователь команда1 команда2 ..."
+        },
+        {
+            "name": "setreminderchannel",
+            "description": "Без описания",
+            "usage": "!setreminderchannel [channel]"
+        },
+        {
+            "name": "inactive_exempt",
+            "description": "Без описания",
+            "usage": "!inactive_exempt"
+        },
+        {
+            "name": "serverreminders",
+            "description": "Без описания",
+            "usage": "!serverreminders"
+        },
+        {
+            "name": "wikisearch",
+            "description": "Без описания",
+            "usage": "!wikisearch <query>"
+        },
+        {
+            "name": "wikipedia_nsfw",
+            "description": "Без описания",
+            "usage": "!wikipedia_nsfw [mode]"
+        },
+        {
+            "name": "emojify",
+            "description": "Без описания",
+            "usage": "!emojify <text>"
+        },
+        {
+            "name": "wikidate",
+            "description": "Без описания",
+            "usage": "!wikidate <query>"
+        },
+        {
+            "name": "vtapistats",
+            "description": "Без описания",
+            "usage": "!vtapistats"
+        },
+        {
+            "name": "wikilang",
+            "description": "Без описания",
+            "usage": "!wikilang [lang=ru]"
+        },
+        {
+            "name": "voicemute",
+            "description": "Ограничивает возможность говорить в голосовых каналах через специальную роль.",
+            "usage": "!voicemute <member> [args]"
+        },
+        {
+            "name": "checkrestrictions",
+            "description": "Показывает текущие ограничения пользователя",
+            "usage": "!checkrestrictions !checkrestrictions [@пользователь]"
+        },
+        {
+            "name": "massclear",
+            "description": "Без описания",
+            "usage": "!massclear [limit=100] [member]"
+        },
+        {
+            "name": "userinfo",
+            "description": "Без описания",
+            "usage": "!userinfo [member]"
+        },
+        {
+            "name": "check_min_age",
+            "description": "Без описания",
+            "usage": "!check_min_age"
+        },
+        {
+            "name": "topgg_stats",
+            "description": "Без описания",
+            "usage": "!topgg_stats"
+        },
+        {
+            "name": "reset_tempban_db",
+            "description": "Без описания",
+            "usage": "!reset_tempban_db"
+        },
+        {
+            "name": "cleanup",
+            "description": "Без описания",
+            "usage": "!cleanup [days=30]"
+        },
+        {
+            "name": "autohelp",
+            "description": "Без описания",
+            "usage": "!autohelp"
+        },
+        {
+            "name": "roleinfo",
+            "description": "Без описания",
+            "usage": "!roleinfo <role>"
+        },
+        {
+            "name": "wikisection",
+            "description": "Без описания",
+            "usage": "!wikisection <query> <section>"
+        },
+        {
+            "name": "wiki",
+            "description": "Без описания",
+            "usage": "!wiki <query>"
+        },
+        {
+            "name": "reminderhelp",
+            "description": "Без описания",
+            "usage": "!reminderhelp"
+        },
+        {
+            "name": "memberswithrole",
+            "description": "Без описания",
+            "usage": "!memberswithrole <role>"
+        },
+        {
+            "name": "nuke",
+            "description": "Без описания",
+            "usage": "!nuke [limit=100]"
+        },
+        {
+            "name": "wikirelated",
+            "description": "Без описания",
+            "usage": "!wikirelated <query>"
+        },
+        {
+            "name": "shelp",
+            "description": "Без описания",
+            "usage": "!shelp"
+        },
+        {
+            "name": "useractivity",
+            "description": "Без описания",
+            "usage": "!useractivity [member]"
+        },
+        {
+            "name": "debug_db",
+            "description": "Без описания",
+            "usage": "!debug_db"
+        },
+        {
+            "name": "check_db",
+            "description": "Без описания",
+            "usage": "!check_db"
+        },
+        {
+            "name": "wikihelp",
+            "description": "Без описания",
+            "usage": "!wikihelp"
+        },
+        {
+            "name": "syshelp",
+            "description": "Без описания",
+            "usage": "!syshelp"
+        },
+        {
+            "name": "servers",
+            "description": "Без описания",
+            "usage": "!servers [page=1]"
+        },
+        {
+            "name": "tickethep",
+            "description": "Без описания",
+            "usage": "!tickethep"
+        },
+        {
+            "name": "finduser",
+            "description": "Без описания",
+            "usage": "!finduser <user_id>"
+        },
+        {
+            "name": "report",
+            "description": "Без описания",
+            "usage": "!report"
+        },
+        {
+            "name": "memberlogs",
+            "description": "Без описания",
+            "usage": "!memberlogs"
+        },
+        {
+            "name": "execute_sql",
+            "description": "Без описания",
+            "usage": "!execute_sql <query>"
+        },
+        {
+            "name": "invite",
+            "description": "Без описания",
+            "usage": "!invite <guild_id>"
+        },
+        {
+            "name": "savecommands",
+            "description": "Без описания",
+            "usage": "!savecommands"
+        },
+        {
+            "name": "reload",
+            "description": "Без описания",
+            "usage": "!reload [path_parts...]"
+        },
+        {
+            "name": "help",
+            "description": "Без описания",
+            "usage": "!help [command_name]"
+        },
+        {
+            "name": "reporthelp",
+            "description": "Без описания",
+            "usage": "!reporthelp"
+        },
+        {
+            "name": "vote",
+            "description": "Без описания",
+            "usage": "!vote"
+        },
+        {
+            "name": "db_stats",
+            "description": "Без описания",
+            "usage": "!db_stats"
+        },
+        {
+            "name": "multipoll",
+            "description": "Без описания",
+            "usage": "!multipoll <time> <params>"
+        },
+        {
+            "name": "debugload",
+            "description": "Без описания",
+            "usage": "!debugload [path_parts...]"
+        },
+        {
+            "name": "poll",
+            "description": "Без описания",
+            "usage": "!poll <time> <params>"
+        },
+        {
+            "name": "findcog",
+            "description": "Без описания",
+            "usage": "!findcog <search_term>"
+        },
+        {
+            "name": "cogslist",
+            "description": "Без описания",
+            "usage": "!cogslist"
+        },
+        {
+            "name": "resume",
+            "description": "Без описания",
+            "usage": "!resume"
+        },
+        {
+            "name": "cleanup_help",
+            "description": "Без описания",
+            "usage": "!cleanup_help"
+        },
+        {
+            "name": "checkvote",
+            "description": "Без описания",
+            "usage": "!checkvote"
+        },
+        {
+            "name": "setup_birthday_role",
+            "description": "Без описания",
+            "usage": "!setup_birthday_role [role]"
+        },
+        {
+            "name": "owticket",
+            "description": "Без описания",
+            "usage": "!owticket"
+        },
+        {
+            "name": "setup_birthdays",
+            "description": "Без описания",
+            "usage": "!setup_birthdays"
+        },
+        {
+            "name": "eval",
+            "description": "Без описания",
+            "usage": "!eval <code>"
+        },
+        {
+            "name": "cunload",
+            "description": "Без описания",
+            "usage": "!cunload <directory> <cog_name>"
+        },
+        {
+            "name": "add_ban_phrase",
+            "description": "Без описания",
+            "usage": "!add_ban_phrase <phrase>"
+        },
+        {
+            "name": "test_vote",
+            "description": "Без описания",
+            "usage": "!test_vote <user_id>"
+        },
+        {
+            "name": "setbirthday",
+            "description": "Без описания",
+            "usage": "!setbirthday <date> [timezone]"
+        },
+        {
+            "name": "tlogs",
+            "description": "Без описания",
+            "usage": "!tlogs [lines=20]"
+        },
+        {
+            "name": "botstats",
+            "description": "Без описания",
+            "usage": "!botstats"
+        },
+        {
+            "name": "sync",
+            "description": "Без описания",
+            "usage": "!sync"
+        },
+        {
+            "name": "deletebirthday",
+            "description": "Без описания",
+            "usage": "!deletebirthday"
+        },
+        {
+            "name": "birthday",
+            "description": "Без описания",
+            "usage": "!birthday [member]"
+        },
+        {
+            "name": "leaveguild",
+            "description": "Без описания",
+            "usage": "!leaveguild <guild_id>"
+        },
+        {
+            "name": "birthdays",
+            "description": "Без описания",
+            "usage": "!birthdays [month]"
+        },
+        {
+            "name": "blacklistguild",
+            "description": "Без описания",
+            "usage": "!blacklistguild <guild_id>"
+        },
+        {
+            "name": "iplookup",
+            "description": "Без описания",
+            "usage": "!iplookup <ip>"
+        },
+        {
+            "name": "check_log_channels",
+            "description": "Без описания",
+            "usage": "!check_log_channels"
+        },
+        {
+            "name": "unblacklistguild",
+            "description": "Без описания",
+            "usage": "!unblacklistguild <guild_id>"
+        },
+        {
+            "name": "logs",
+            "description": "Без описания",
+            "usage": "!logs"
+        },
+        {
+            "name": "broadcast",
+            "description": "Без описания",
+            "usage": "!broadcast [mode] [message]"
+        },
+        {
+            "name": "listblacklisted",
+            "description": "Без описания",
+            "usage": "!listblacklisted"
+        },
+        {
+            "name": "optimize-db",
+            "description": "Без описания",
+            "usage": "!optimize-db"
+        },
+        {
+            "name": "mute",
+            "description": "Ограничивает возможность писать в чатах",
+            "usage": "!mute <member> [duration] [reason=Не указана]"
+        },
+        {
+            "name": "urban",
+            "description": "Без описания",
+            "usage": "!urban <term>"
+        },
+        {
+            "name": "show_last",
+            "description": "Без описания",
+            "usage": "!show_last [limit=5]"
+        },
+        {
+            "name": "getlogs",
+            "description": "Без описания",
+            "usage": "!getlogs [arg1] [arg2]"
+        },
+        {
+            "name": "urbanhelp",
+            "description": "Без описания",
+            "usage": "!urbanhelp"
+        },
+        {
+            "name": "urbanrandom",
+            "description": "Без описания",
+            "usage": "!urbanrandom"
+        },
+        {
+            "name": "sudo",
+            "description": "Без описания",
+            "usage": "!sudo <user> <command>"
+        },
+        {
+            "name": "ticket",
+            "description": "Без описания",
+            "usage": "!ticket"
+        },
+        {
+            "name": "seturbannsfw",
+            "description": "Без описания",
+            "usage": "!seturbannsfw [setting]"
+        },
+        {
+            "name": "anonpoll",
+            "description": "Без описания",
+            "usage": "!anonpoll <time> <params>"
+        },
+        {
+            "name": "play",
+            "description": "Без описания",
+            "usage": "!play [query]"
+        },
+        {
+            "name": "unmute",
+            "description": "Снимает ограничение на отправку сообщений",
+            "usage": "!unmute <member>"
+        },
+        {
+            "name": "quickpoll",
+            "description": "Без описания",
+            "usage": "!quickpoll <question>"
+        },
+        {
+            "name": "skip",
+            "description": "Без описания",
+            "usage": "!skip"
+        },
+        {
+            "name": "tempban",
+            "description": "Временно ограничивает участника, перемещая в скрытый канал BAN",
+            "usage": "!tempban <member> <duration> [reason=Не указана]"
+        },
+        {
+            "name": "weather",
+            "description": "Без описания",
+            "usage": "!weather [city]"
+        },
+        {
+            "name": "rules",
+            "description": "Показывает список доступных команд для управления правилами",
+            "usage": "!rules"
+        },
+        {
+            "name": "pollarchive",
+            "description": "Без описания",
+            "usage": "!pollarchive [days=30]"
+        },
+        {
+            "name": "clearwarns",
+            "description": "Полностью очищает активные предупреждения",
+            "usage": "!clearwarns <member>"
+        },
+        {
+            "name": "pause",
+            "description": "Без описания",
+            "usage": "!pause"
+        },
+        {
+            "name": "warnhelp",
+            "description": "Без описания",
+            "usage": "!warnhelp"
+        },
+        {
+            "name": "restorepoll",
+            "description": "Без описания",
+            "usage": "!restorepoll [archive_id]"
+        },
+        {
+            "name": "warnhistory",
+            "description": "Отображает все предупреждения (включая снятые)",
+            "usage": "!warnhistory [member]"
+        },
+        {
+            "name": "stop",
+            "description": "Без описания",
+            "usage": "!stop"
+        },
+        {
+            "name": "forecast",
+            "description": "Без описания",
+            "usage": "!forecast [args]"
+        },
+        {
+            "name": "pollinfo",
+            "description": "Без описания",
+            "usage": "!pollinfo <poll_id>"
+        },
+        {
+            "name": "loop",
+            "description": "Без описания",
+            "usage": "!loop"
+        },
+        {
+            "name": "pollhelp",
+            "description": "Без описания",
+            "usage": "!pollhelp"
+        },
+        {
+            "name": "hourly",
+            "description": "Без описания",
+            "usage": "!hourly [args]"
+        },
+        {
+            "name": "warns",
+            "description": "Отображает список активных предупреждений",
+            "usage": "!warns [member]"
+        },
+        {
+            "name": "volume",
+            "description": "Без описания",
+            "usage": "!volume <volume>"
+        },
+        {
+            "name": "pollcheck",
+            "description": "Без описания",
+            "usage": "!pollcheck"
+        },
+        {
+            "name": "fw",
+            "description": "Без описания",
+            "usage": "!fw"
+        },
+        {
+            "name": "weathermap",
+            "description": "Без описания",
+            "usage": "!weathermap [city]"
+        },
+        {
+            "name": "unwarn",
+            "description": "Снимает указанный или последний активный варн",
+            "usage": "!unwarn <member> [warn_id]"
+        },
+        {
+            "name": "queue",
+            "description": "Без описания",
+            "usage": "!queue"
+        },
+        {
+            "name": "nowplaying",
+            "description": "Без описания",
+            "usage": "!nowplaying"
+        },
+        {
+            "name": "blacklist",
+            "description": "Добавляет пользователя в черный список (запрещает все команды бота)",
+            "usage": "!blacklist !blacklist @пользователь [причина]"
+        },
+        {
+            "name": "airquality",
+            "description": "Без описания",
+            "usage": "!airquality [city]"
+        },
+        {
+            "name": "warn",
+            "description": "Добавляет варн участнику",
+            "usage": "!warn <member> [reason=Не указана]"
+        },
+        {
+            "name": "sunrise",
+            "description": "Без описания",
+            "usage": "!sunrise [city]"
+        },
+        {
+            "name": "steam_notify",
+            "description": "Без описания",
+            "usage": "!steam_notify [options...]"
+        },
+        {
+            "name": "shuffle",
+            "description": "Без описания",
+            "usage": "!shuffle"
+        },
+        {
+            "name": "weatheralert",
+            "description": "Без описания",
+            "usage": "!weatheralert [city]"
+        },
+        {
+            "name": "lyrics",
+            "description": "Без описания",
+            "usage": "!lyrics [song_name]"
+        },
+        {
+            "name": "compare",
+            "description": "Без описания",
+            "usage": "!compare <cities>"
+        },
+        {
+            "name": "fix_log_channels",
+            "description": "Без описания",
+            "usage": "!fix_log_channels"
+        },
+        {
+            "name": "last_errors",
+            "description": "Без описания",
+            "usage": "!last_errors [limit=5]"
+        },
+        {
+            "name": "iphelp",
+            "description": "Без описания",
+            "usage": "!iphelp"
+        },
+        {
+            "name": "reset_music",
+            "description": "Без описания",
+            "usage": "!reset_music"
+        },
+        {
+            "name": "setmycity",
+            "description": "Без описания",
+            "usage": "!setmycity <city>"
+        },
+        {
+            "name": "lyrics_toggle",
+            "description": "Без описания",
+            "usage": "!lyrics_toggle"
+        },
+        {
+            "name": "suggest",
+            "description": "Без описания",
+            "usage": "!suggest <suggestion>"
+        },
+        {
+            "name": "banhelp",
+            "description": "Без описания",
+            "usage": "!banhelp"
+        },
+        {
+            "name": "setweatherunit",
+            "description": "Без описания",
+            "usage": "!setweatherunit <unit>"
+        },
+        {
+            "name": "setup",
+            "description": "Без описания",
+            "usage": "!setup"
+        },
+        {
+            "name": "reportip",
+            "description": "Без описания",
+            "usage": "!reportip <ip> <reason>"
+        },
+        {
+            "name": "setguildcity",
+            "description": "Без описания",
+            "usage": "!setguildcity <city>"
+        },
+        {
+            "name": "ipreputation",
+            "description": "Без описания",
+            "usage": "!ipreputation <ip>"
+        },
+        {
+            "name": "playlist",
+            "description": "Без описания",
+            "usage": "!playlist [url]"
+        },
+        {
+            "name": "setinactivity",
+            "description": "Без описания",
+            "usage": "!setinactivity <days> <kick_enabled> [log_channel]"
+        },
+        {
+            "name": "modhelp",
+            "description": "Без описания",
+            "usage": "!modhelp"
+        },
+        {
+            "name": "sslinfo",
+            "description": "Без описания",
+            "usage": "!sslinfo <domain>"
+        },
+        {
+            "name": "weatherhelp",
+            "description": "Без описания",
+            "usage": "!weatherhelp"
+        },
+        {
+            "name": "error_info",
+            "description": "Без описания",
+            "usage": "!error_info <error_id>"
+        },
+        {
+            "name": "clear",
+            "description": "Без описания",
+            "usage": "!clear [amount=5] [member]"
+        },
+        {
+            "name": "whois",
+            "description": "Без описания",
+            "usage": "!whois <target>"
+        },
+        {
+            "name": "test_error",
+            "description": "Без описания",
+            "usage": "!test_error"
+        },
+        {
+            "name": "kick",
+            "description": "Без описания",
+            "usage": "!kick <member> [reason=Не указана]"
+        },
+        {
+            "name": "info",
+            "description": "Без описания",
+            "usage": "!info"
+        },
+        {
+            "name": "slowmode",
+            "description": "Без описания",
+            "usage": "!slowmode [seconds=0] [channel]"
+        },
+        {
+            "name": "errors_by_date",
+            "description": "Без описания",
+            "usage": "!errors_by_date <date>"
+        },
+        {
+            "name": "ban",
+            "description": "Без описания",
+            "usage": "!ban <member> [reason=Не указана]"
+        },
+        {
+            "name": "cmdlogs",
+            "description": "Без описания",
+            "usage": "!cmdlogs"
+        },
+        {
+            "name": "force_send",
+            "description": "Без описания",
+            "usage": "!force_send <text>"
+        },
+        {
+            "name": "versionhistory",
+            "description": "Без описания",
+            "usage": "!versionhistory [limit=10]"
+        },
+        {
+            "name": "unban",
+            "description": "Без описания",
+            "usage": "!unban <user_reference> [reason=Не указана]"
+        },
+        {
+            "name": "version",
+            "description": "Без описания",
+            "usage": "!version"
+        },
+        {
+            "name": "steam_notify_list",
+            "description": "Без описания",
+            "usage": "!steam_notify_list"
+        },
+        {
+            "name": "avatar",
+            "description": "Без описания",
+            "usage": "!avatar [member]"
+        },
+        {
+            "name": "sreview",
+            "description": "Без описания",
+            "usage": "!sreview"
+        },
+        {
+            "name": "publishchanges",
+            "description": "Без описания",
+            "usage": "!publishchanges [channel] [limit=5]"
+        },
+        {
+            "name": "steam_notify_settings",
+            "description": "Без описания",
+            "usage": "!steam_notify_settings [option] [value]"
+        },
+        {
+            "name": "addchange",
+            "description": "Без описания",
+            "usage": "!addchange <change_type> <description> [custom_date] [custom_version]"
+        },
+        {
+            "name": "bans",
+            "description": "Без описания",
+            "usage": "!bans"
+        },
+        {
+            "name": "steam_track",
+            "description": "Без описания",
+            "usage": "!steam_track <steam_id>"
+        },
+        {
+            "name": "checkuser",
+            "description": "Без описания",
+            "usage": "!checkuser <member>"
+        },
+        {
+            "name": "cleanup_messages",
+            "description": "Без описания",
+            "usage": "!cleanup_messages [days=30]"
+        },
+        {
+            "name": "delete-my-messages",
+            "description": "Без описания",
+            "usage": "!delete-my-messages [message_id]"
+        },
+        {
+            "name": "addexemptrole",
+            "description": "Без описания",
+            "usage": "!addexemptrole <role>"
+        },
+        {
+            "name": "steam_untrack",
+            "description": "Без описания",
+            "usage": "!steam_untrack <steam_id>"
+        },
+        {
+            "name": "channelstats",
+            "description": "Без описания",
+            "usage": "!channelstats [days=7] [limit=10]"
+        },
+        {
+            "name": "inactive",
+            "description": "Без описания",
+            "usage": "!inactive [days=30]"
+        },
+        {
+            "name": "backup_db",
+            "description": "Без описания",
+            "usage": "!backup_db"
+        },
+        {
+            "name": "vtcheck",
+            "description": "Без описания",
+            "usage": "!vtcheck [ID_сообщения]"
+        },
+        {
+            "name": "softkick",
+            "description": "Без описания",
+            "usage": "!softkick <member> [reason]"
+        },
+        {
+            "name": "voiceunmute",
+            "description": "Снимает ограничение на голосовые каналы",
+            "usage": "!voiceunmute <member>"
+        },
+        {
+            "name": "untempban",
+            "description": "Досрочно снимает временные ограничения и восстанавливает роли",
+            "usage": "!untempban <member_or_id>"
+        },
+        {
+            "name": "checkproxy",
+            "description": "Без описания",
+            "usage": "!checkproxy <ip>"
+        },
+        {
+            "name": "kickinactive",
+            "description": "Без описания",
+            "usage": "!kickinactive [days=30] [confirm=False]"
+        },
+        {
+            "name": "fullstats",
+            "description": "Без описания",
+            "usage": "!fullstats [days=7]"
+        },
+        {
+            "name": "bridge_status",
+            "description": "Без описания",
+            "usage": "!bridge_status"
+        },
+        {
+            "name": "remove_ban_phrase",
+            "description": "Без описания",
+            "usage": "!remove_ban_phrase <phrase>"
+        },
+        {
+            "name": "remind",
+            "description": "Без описания",
+            "usage": "!remind <time> <message>"
+        },
+        {
+            "name": "moderationhelp",
+            "description": "Без описания",
+            "usage": "!moderationhelp"
+        },
+        {
+            "name": "iplookupstats",
+            "description": "Без описания",
+            "usage": "!iplookupstats"
+        },
+        {
+            "name": "exportlogs",
+            "description": "Без описания",
+            "usage": "!exportlogs [limit=100]"
+        },
+        {
+            "name": "ping",
+            "description": "Без описания",
+            "usage": "!ping"
+        },
+        {
+            "name": "iplookupsettings",
+            "description": "Без описания",
+            "usage": "!iplookupsettings [setting] [value]"
+        },
+        {
+            "name": "reddit",
+            "description": "Без описания",
+            "usage": "!reddit"
+        },
+        {
+            "name": "leave",
+            "description": "Без описания",
+            "usage": "!leave"
+        },
+        {
+            "name": "voice-setup",
+            "description": "Настройка системы голосовых комнат",
+            "usage": "!voice-setup"
+        },
+        {
+            "name": "list_ban_phrases",
+            "description": "Без описания",
+            "usage": "!list_ban_phrases"
+        },
+        {
+            "name": "logsettings",
+            "description": "Без описания",
+            "usage": "!logsettings"
+        },
+        {
+            "name": "rolecheck",
+            "description": "Без описания",
+            "usage": "!rolecheck <role>"
+        },
+        {
+            "name": "debug_time",
+            "description": "Без описания",
+            "usage": "!debug_time"
+        },
+        {
+            "name": "recurring",
+            "description": "Без описания",
+            "usage": "!recurring <args>"
+        },
+        {
+            "name": "serverinfo",
+            "description": "Без описания",
+            "usage": "!serverinfo"
+        }
+    ]
+}

@@ -2,8 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Командный центр бота</title>
+    <title>Команды бота</title>
     <style>
         :root {
             --discord-dark: #36393f;
@@ -11,7 +10,6 @@
             --discord-blue: #5865f2;
             --discord-text: #dcddde;
             --discord-green: #3ba55c;
-            --discord-red: #ed4245;
         }
         
         body {
@@ -24,65 +22,12 @@
             padding: 20px;
         }
         
-        .header {
-            text-align: center;
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid var(--discord-blue);
-        }
-        
-        .header h1 {
-            color: var(--discord-blue);
-            font-size: 2.5rem;
-            margin: 0;
-            position: relative;
-            display: inline-block;
-        }
-        
-        .header h1::after {
-            content: "";
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50px;
-            height: 3px;
-            background: var(--discord-green);
-        }
-        
-        .category-tabs {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 20px;
-            justify-content: center;
-        }
-        
-        .category-tab {
-            background: var(--discord-darker);
-            padding: 8px 15px;
-            border-radius: 20px;
-            cursor: pointer;
-            transition: all 0.2s;
-            font-size: 0.9rem;
-        }
-        
-        .category-tab:hover, .category-tab.active {
-            background: var(--discord-blue);
-            color: white;
-        }
-        
         .category {
             background: var(--discord-darker);
             border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 25px;
-            display: none;
-        }
-        
-        .category.active {
-            display: block;
-            animation: fadeIn 0.3s ease;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--discord-blue);
         }
         
         .category-name {
@@ -91,166 +36,126 @@
             margin-bottom: 15px;
             display: flex;
             align-items: center;
-            padding-bottom: 10px;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .category-name::before {
+            content: "•";
+            margin-right: 10px;
+            color: var(--discord-green);
         }
         
         .commands-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 15px;
+            gap: 12px;
         }
         
         .command-card {
             background: rgba(0, 0, 0, 0.2);
-            border-radius: 8px;
-            padding: 15px;
+            border-radius: 6px;
+            padding: 12px;
             transition: all 0.2s;
-            border-left: 3px solid var(--discord-green);
         }
         
         .command-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            background: rgba(0, 0, 0, 0.3);
         }
         
         .command-name {
             color: var(--discord-blue);
             font-weight: 600;
-            margin-bottom: 8px;
-            font-size: 1.1rem;
+            margin-bottom: 5px;
         }
         
         .command-desc {
-            margin-bottom: 10px;
-            color: rgba(255,255,255,0.8);
+            margin-bottom: 8px;
+            font-size: 0.95rem;
         }
         
         .command-usage {
-            background: rgba(0,0,0,0.3);
-            padding: 8px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 6px;
             border-radius: 4px;
             font-family: 'Consolas', monospace;
-            display: block;
-            margin-top: 10px;
             font-size: 0.9rem;
-            color: #f6f6f6;
+            display: block;
+            word-break: break-all;
         }
         
         .search-container {
-            margin: 20px auto;
-            max-width: 600px;
+            margin: 20px 0;
             position: sticky;
             top: 10px;
             z-index: 100;
             background: var(--discord-dark);
-            padding: 15px 0;
+            padding: 10px 0;
         }
         
         #search {
             width: 100%;
-            padding: 12px 20px;
-            border-radius: 25px;
+            padding: 10px 15px;
+            border-radius: 4px;
             border: none;
             background: var(--discord-darker);
             color: white;
             font-size: 1rem;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
         }
         
-        #search::placeholder {
-            color: rgba(255,255,255,0.5);
-        }
-        
-        .no-results {
-            text-align: center;
-            padding: 30px;
-            color: var(--discord-red);
-            font-size: 1.1rem;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+        .hidden {
+            display: none;
         }
         
         @media (max-width: 768px) {
             .commands-grid {
                 grid-template-columns: 1fr;
             }
-            
-            .header h1 {
-                font-size: 2rem;
-            }
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>⚙️ КОМАНДЫ БОТА</h1>
-        <p>Полный список доступных команд с удобной навигацией</p>
-    </div>
+    <h1>📜 Команды бота</h1>
     
     <div class="search-container">
-        <input type="text" id="search" placeholder="🔍 Поиск по всем командам..." autocomplete="off">
+        <input type="text" id="search" placeholder="🔍 Поиск по командам..." autocomplete="off">
     </div>
-    
-    <div class="category-tabs" id="category-tabs"></div>
     
     <div id="categories-container"></div>
     
     <script>
         document.addEventListener('DOMContentLoaded', async () => {
             try {
-                const response = await fetch('command.json')
-                if (!response.ok) throw new Error(`Ошибка загрузки: ${response.status}`);
+                const response = await fetch('./commands.json');
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                 
                 const data = await response.json();
                 const container = document.getElementById('categories-container');
-                const tabsContainer = document.getElementById('category-tabs');
                 
-                // Фильтрация скрытых команд
-                const filteredCommands = data.commands.filter(cmd => !cmd.hidden);
+                // Фильтрация скрытых команд и группировка по категориям
+                const filteredCommands = data.commands.filter(cmd => 
+                    !cmd.hidden && !cmd.name.includes('jishaku') && !cmd.name.includes('owner')
+                );
                 
-                // Группировка по категориям
                 const categories = {};
                 filteredCommands.forEach(cmd => {
-                    const category = cmd.cog || 'Разное';
+                    const category = cmd.cog || 'Без категории';
                     if (!categories[category]) {
                         categories[category] = [];
                     }
                     categories[category].push(cmd);
                 });
                 
-                // Создание табов для категорий
-                let tabsHtml = '';
-                let categoriesHtml = '';
-                let firstCategory = true;
+                // Сортировка категорий по алфавиту
+                const sortedCategories = Object.keys(categories).sort();
                 
-                for (const [categoryName, commands] of Object.entries(categories)) {
-                    // Добавляем таб
-                    tabsHtml += `
-                        <div class="category-tab ${firstCategory ? 'active' : ''}" 
-                             data-category="${categoryName.toLowerCase()}">
-                            ${categoryName}
-                        </div>
-                    `;
-                    
-                    // Добавляем контент категории
-                    categoriesHtml += `
-                        <div class="category ${firstCategory ? 'active' : ''}" 
-                             id="category-${categoryName.toLowerCase()}">
-                            <div class="category-name">
-                                <span>${categoryName}</span>
-                                <span style="margin-left: auto; font-size: 0.8rem; color: var(--discord-green);">
-                                    ${commands.length} команд
-                                </span>
-                            </div>
+                // Рендеринг категорий
+                let html = '';
+                sortedCategories.forEach(category => {
+                    html += `
+                        <div class="category" data-category="${category.toLowerCase()}">
+                            <div class="category-name">${category}</div>
                             <div class="commands-grid">
-                                ${commands.map(cmd => `
-                                    <div class="command-card" 
-                                         data-command="${cmd.name.toLowerCase()}"
-                                         data-description="${(cmd.description || '').toLowerCase()}">
+                                ${categories[category].map(cmd => `
+                                    <div class="command-card" data-command="${cmd.name.toLowerCase()}">
                                         <div class="command-name">!${cmd.name}</div>
                                         <div class="command-desc">${cmd.description || 'Без описания'}</div>
                                         <code class="command-usage">${cmd.usage || '!' + cmd.name}</code>
@@ -259,91 +164,40 @@
                             </div>
                         </div>
                     `;
-                    
-                    firstCategory = false;
-                }
-                
-                tabsContainer.innerHTML = tabsHtml;
-                container.innerHTML = categoriesHtml;
-                
-                // Обработка кликов по табам
-                document.querySelectorAll('.category-tab').forEach(tab => {
-                    tab.addEventListener('click', () => {
-                        // Убираем активный класс у всех табов
-                        document.querySelectorAll('.category-tab').forEach(t => {
-                            t.classList.remove('active');
-                        });
-                        
-                        // Добавляем активный класс текущему табу
-                        tab.classList.add('active');
-                        
-                        // Скрываем все категории
-                        document.querySelectorAll('.category').forEach(cat => {
-                            cat.classList.remove('active');
-                        });
-                        
-                        // Показываем выбранную категорию
-                        const categoryId = tab.dataset.category;
-                        document.getElementById(`category-${categoryId}`).classList.add('active');
-                    });
                 });
                 
-                // Поиск по командам
+                container.innerHTML = html;
+                
+                // Поиск
                 const searchInput = document.getElementById('search');
                 searchInput.addEventListener('input', () => {
-                    const searchTerm = searchInput.value.toLowerCase().trim();
+                    const searchTerm = searchInput.value.toLowerCase();
+                    const categories = document.querySelectorAll('.category');
                     
-                    if (searchTerm === '') {
-                        // Показываем все команды, если поиск пустой
-                        document.querySelectorAll('.command-card').forEach(card => {
-                            card.style.display = 'block';
-                        });
-                        document.querySelectorAll('.category').forEach(cat => {
-                            const hasVisibleCommands = cat.querySelector('.command-card[style="display: block;"]') !== null;
-                            cat.style.display = hasVisibleCommands ? 'block' : 'none';
-                        });
-                        return;
-                    }
-                    
-                    let hasResults = false;
-                    
-                    // Перебираем все команды
-                    document.querySelectorAll('.command-card').forEach(card => {
-                        const matches = card.dataset.command.includes(searchTerm) || 
-                                        card.dataset.description.includes(searchTerm);
+                    categories.forEach(category => {
+                        const commands = category.querySelectorAll('.command-card');
+                        let hasVisibleCommands = false;
                         
-                        card.style.display = matches ? 'block' : 'none';
+                        commands.forEach(cmd => {
+                            const matches = cmd.dataset.command.includes(searchTerm) || 
+                                            cmd.textContent.toLowerCase().includes(searchTerm);
+                            cmd.classList.toggle('hidden', !matches);
+                            
+                            if (matches) hasVisibleCommands = true;
+                        });
                         
-                        if (matches) hasResults = true;
+                        category.style.display = hasVisibleCommands ? 'block' : 'none';
                     });
-                    
-                    // Показываем/скрываем категории
-                    document.querySelectorAll('.category').forEach(cat => {
-                        const hasVisibleCommands = cat.querySelector('.command-card[style="display: block;"]') !== null;
-                        cat.style.display = hasVisibleCommands ? 'block' : 'none';
-                    });
-                    
-                    // Показываем сообщение, если нет результатов
-                    const noResults = document.getElementById('no-results');
-                    if (!hasResults) {
-                        if (!noResults) {
-                            const noResultsDiv = document.createElement('div');
-                            noResultsDiv.id = 'no-results';
-                            noResultsDiv.className = 'no-results';
-                            noResultsDiv.textContent = 'Ничего не найдено. Попробуйте другой запрос.';
-                            container.appendChild(noResultsDiv);
-                        }
-                    } else if (noResults) {
-                        noResults.remove();
-                    }
                 });
                 
             } catch (error) {
-                console.error('Ошибка:', error);
-                container.innerHTML = `
-                    <div class="no-results">
-                        Произошла ошибка при загрузке команд.<br>
-                        Пожалуйста, попробуйте позже или сообщите администратору.
+                console.error('Ошибка загрузки команд:', error);
+                document.getElementById('categories-container').innerHTML = `
+                    <div style="color: #f04747; text-align: center; padding: 20px;">
+                        Ошибка загрузки списка команд. Пожалуйста, проверьте:<br>
+                        1. Файл commands.json должен быть в папке docs/<br>
+                        2. JSON должен иметь правильный формат<br>
+                        Ошибка: ${error.message}
                     </div>
                 `;
             }

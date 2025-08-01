@@ -124,7 +124,7 @@
 
   <script>
     // Загрузка команд из _data/commands.json
-    fetch('_data/commands.json')
+    fetch('./_data/commands.json')
       .then(res => res.json())
       .then(data => {
         const commandsContainer = document.getElementById('commands');
